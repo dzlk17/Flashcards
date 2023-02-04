@@ -8,13 +8,15 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'FlashCards',
+      title: 'Flashcards',
       theme: ThemeData(
-        primarySwatch: Colors.lime,
-        scaffoldBackgroundColor: Colors.blueGrey,
+          primarySwatch: Colors.lime,
+          scaffoldBackgroundColor: Colors.blueGrey[600],
         textTheme: const TextTheme(
           bodyLarge: TextStyle(color: textColor),
           bodySmall: TextStyle(color: textColor),
@@ -30,19 +32,22 @@ class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
   @override
-  State<StatefulWidget> createState() => _MyHomePageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          AppBar(title: const Text('FlashCards')),
-        ],
+      appBar: AppBar(
+        title: const Text('Flashcards', style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold))
       ),
+      body: Center(
+        child: Column(
+
+        )
+      )
+
     );
   }
-
 }
