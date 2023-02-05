@@ -1,24 +1,36 @@
 import 'package:flutter/material.dart';
 import 'components/appBar.dart';
+import 'components/bigButton.dart';
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
 
-  @override
-  State<StatefulWidget> createState() => _MyHomePageState();
-}
+  void _learn() {
 
-class _MyHomePageState extends State<MyHomePage> {
+  }
+
+  void _quit() {
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: getAppBar('Flashcards'),
-        body: Center(
-            child: Column(
-
-            )
-        )
-
+        body:
+          Center(
+            child:
+              Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    getBigButton('LEARN', _learn),
+                    getBigButton('QUIT', _quit)
+                  ]
+              )
+          )
     );
   }
+
+
+
 }
