@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'learnPage.dart';
 import 'homePage.dart';
 
 const Color textColor = Colors.black87;
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           bodyMedium: TextStyle(color: textColor),
         )
       ),
-      home: const MyHomePage(),
+      home: const LearnPage(),
     );
   }
 }
