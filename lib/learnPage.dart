@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'timer.dart';
 
 class LearnPage extends StatefulWidget {
   const LearnPage({super.key});
@@ -18,7 +19,8 @@ class _LearnPageState extends State<LearnPage> {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container( margin: const EdgeInsets.all(15.0), padding: const EdgeInsets.all(11.0), decoration: BoxDecoration(borderRadius: BorderRadius.circular(17.0), color: Colors.lime), child: Text('How old are you?', style: TextStyle(fontSize: 30),),),
+                CountdownTimer(callBack: (){print('Time is out');}, duration: 30,),
+                Container( margin: const EdgeInsets.all(30.0), padding: const EdgeInsets.all(11.0), decoration: BoxDecoration(borderRadius: BorderRadius.circular(17.0), color: Colors.lime), child: Text('How old are you?', style: TextStyle(fontSize: 30),),),
                 OutlinedButton(onPressed: (){print('button pressed');}, style: OutlinedButton.styleFrom( side: BorderSide(color: Colors.black38)) , child: Text('Next'),),
                 OutlinedButton(onPressed: (){print('button pressed');}, style: OutlinedButton.styleFrom( side: BorderSide(color: Colors.black38)) , child: Text('Next'),),
                 OutlinedButton(onPressed: (){print('button pressed');}, style: OutlinedButton.styleFrom( side: BorderSide(color: Colors.black38)) , child: Text('Next'),),
