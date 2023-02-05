@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.lime,
           scaffoldBackgroundColor: Colors.blueGrey[600],
+          fontFamily: 'Itim-Regular',
         textTheme: const TextTheme(
           bodyLarge: TextStyle(color: textColor),
           bodySmall: TextStyle(color: textColor),

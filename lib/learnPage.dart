@@ -18,8 +18,7 @@ class _LearnPageState extends State<LearnPage> {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                TextField(decoration: InputDecoration( border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0),),
-                  hintText: 'Pytanie:',), textAlign: TextAlign.center,),
+                Container( margin: const EdgeInsets.all(15.0), padding: const EdgeInsets.all(11.0), decoration: BoxDecoration(borderRadius: BorderRadius.circular(17.0), color: Colors.lime), child: Text('How old are you?', style: TextStyle(fontSize: 30),),),
                 OutlinedButton(onPressed: (){print('button pressed');}, style: OutlinedButton.styleFrom( side: BorderSide(color: Colors.black38)) , child: Text('Next'),),
                 OutlinedButton(onPressed: (){print('button pressed');}, style: OutlinedButton.styleFrom( side: BorderSide(color: Colors.black38)) , child: Text('Next'),),
                 OutlinedButton(onPressed: (){print('button pressed');}, style: OutlinedButton.styleFrom( side: BorderSide(color: Colors.black38)) , child: Text('Next'),),
