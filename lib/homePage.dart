@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'components/appBar.dart';
 import 'components/bigButton.dart';
+import 'learnPage.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
 
-  void _learn() {
-
-  }
-
   void _quit() {
-
+    SystemNavigator.pop();
   }
 
   @override
@@ -23,7 +21,9 @@ class MyHomePage extends StatelessWidget {
               Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    getBigButton('LEARN', _learn),
+                    getBigButton('LEARN', () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const LearnPage()));
+                    }),
                     getBigButton('QUIT', _quit)
                   ]
               )

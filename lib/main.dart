@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           bodyMedium: TextStyle(color: textColor),
         )
       ),
-      home: const LearnPage(),
+      home: const MyHomePage()
     );
   }
 }
